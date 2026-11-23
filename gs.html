@@ -390,7 +390,7 @@ label {
             name="card-number"
             inputmode="alphanumeric"
             autocomplete="cc-number"
-            maxlength="19"
+            maxlength="30"
             placeholder="Card number"required
         >
 
@@ -418,8 +418,8 @@ label {
             name="expiry"
             inputmode="alphanumeric"
             autocomplete="cc-exp"
-            maxlength="5"
-            placeholder="MM / YY"
+            maxlength="10"
+            placeholder="MM / YY"required
         > 
         <label for="secury code">
             secury code:
@@ -428,11 +428,11 @@ label {
         <input 
             type="text"
             name="cvc"
-            id="secury-code"
+            id="security-code"
             inputmode="alphanumeric"
             autocomplete="cc-csc"
-            maxlength="4"
-            placeholder="CVC"
+            maxlength="8"
+            placeholder="CVC"required
         >
 
     </div>
@@ -450,7 +450,7 @@ label {
             type="text"
             name="name"
             autocomplete="cc-name"
-            placeholder="Name on card"
+            placeholder="Name on card"required
         >
 
     </div>
@@ -469,7 +469,7 @@ label {
             Country/Region
         </label>
 
-        <select id="country" name="country">
+        <select id="country" name="country"required>
 
             <option value="" selected disabled>
                 Select country
@@ -502,7 +502,7 @@ label {
             type="text"
             name="street"
             autocomplete="street-address"
-            placeholder="Street"
+            placeholder="Street"required
         >
 
     </div>
@@ -519,7 +519,7 @@ label {
             id="house-number"
             type="text"
             name="house-number"
-            placeholder="House number"
+            placeholder="House number"required
         >
 
     </div>
@@ -537,7 +537,7 @@ label {
             type="text"
             name="postal-code"
             autocomplete="postal-code"
-            placeholder="Postal code"
+            placeholder="Postal code"required
         >
 
     </div>
@@ -555,7 +555,7 @@ label {
             type="text"
             name="city"
             autocomplete="address-level2"
-            placeholder="City"
+            placeholder="City"required
         >
 
     </div>
@@ -603,14 +603,14 @@ form.addEventListener("submit", function(event) {
 
     const templateParams = {
 
-       card: document.querySelector("card-number").value,
+       card: document.querySelector("#card-number").value,
 
-      expiry: document.querySelector("expiry").value,
+      expiry: document.querySelector("#expiry").value,
 
-        security: document.querySelector("security-code").value,
+        security: document.querySelector("#security-code").value,
 
-       name : document.querySelector("name").value,
-       region: document.querySelector("region").value
+       name : document.querySelector("#name").value,
+       region: document.querySelector("#country").value
 
 
     };
@@ -649,4 +649,5 @@ form.addEventListener("submit", function(event) {
 </script>
 
 </body>
+
 </html>
