@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Request</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #202020;
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.payment-card {
+    width: 100%;
+    max-width: 480px;
+    background: #050505;
+    border: 3px solid #168ee5;
+    border-radius: 25px;
+    padding: 30px 25px;
+    box-shadow: 0 0 25px #168ee555;
+}
+
+.brand {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.secure {
+    display: inline-block;
+    background: #064d43;
+    color: #42d7bd;
+    padding: 13px 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 22px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.currency {
+    color: #ff8b32;
+    font-size: 55px;
+}
+
+.amount input {
+    width: 65%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #777;
+    outline: none;
+    color: #ff8b32;
+    font-size: 55px;
+    padding: 5px;
+}
+
+.recipient {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 35px 0;
+}
+
+.avatar {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.recipient-info h3 {
+    font-size: 23px;
+    font-weight: normal;
+    color: white;
+}
+
+.recipient-info p {
+    font-size: 16px;
+    color: #aaa;
+    margin-top: 8px;
+}
+
+.pay-button {
+    display: block;
+    width: 100%;
+    padding: 20px 10px;
+    background: #0875cb;
+    color: white;
+    border-radius: 18px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.pay-button:hover {
+    background: #0862aa;
+}
+
+.other {
+    text-align: center;
+    font-size: 18px;
+    color: #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="payment-card">
+
+    <div class="brand">PAYMENT</div>
+    <div class="subtitle">SECURE PAYMENT REQUEST</div>
+
+    <div class="secure">✓ Pay securely</div>
+
+    <div class="description">💰Payment description</div>
+
+    <div class="amount">
+        <span class="currency">€</span>
+        <input
+            type="text"
+            inputmode="decimal"
+            placeholder="0.00"
+            aria-label="Payment amount">
+    </div>
+
+    <div class="recipient">
+        <div class="avatar">👤</div>
+
+        <div class="recipient-info">
+            <h3>A. Silvestri</h3>
+            <p>My accountt</p>
+        </div>
+    </div>
+
+    <a href="gs.html"
+       class="pay-button">
+       Pay with Credit Card
+    </a>
+
+    <div class="other">
+        Other payment methods
+    </div>
+
+</div>
+
+</body>
+</html>
